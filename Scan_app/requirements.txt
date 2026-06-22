@@ -1,0 +1,10 @@
+PyQt5
+opencv-contrib-python
+numpy
+pypylon
+open3d
+pyqtgraph
+PyOpenGL
+scipy
+PyYAML
+ultralytics
