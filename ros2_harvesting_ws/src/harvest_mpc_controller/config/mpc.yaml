@@ -1,0 +1,16 @@
+mpc_reference:
+  ros__parameters:
+    state_topic: /joint_states
+    target_topic: /harvest/mpc/target
+    reference_topic: /harvest/mpc/reference
+    status_topic: /harvest/mpc/status
+    update_rate_hz: 20.0
+    state_timeout_sec: 0.10
+    horizon_steps: 15
+    model_dt_sec: 0.05
+    position_weight: 20.0
+    velocity_weight: 2.0
+    acceleration_weight: 0.20
+    maximum_velocity_rad_s: 0.25
+    maximum_acceleration_rad_s2: 0.50
+    shadow_mode: true

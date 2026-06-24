@@ -1,0 +1,9 @@
+telemetry_bridge:
+  ros__parameters:
+    bind_address: 0.0.0.0
+    udp_port: 15000
+    maximum_packet_bytes: 8192
+    stale_timeout_sec: 0.25
+    joint_state_topic: /denso/joint_states
+    controller_state_topic: /denso/controller_state
+    frame_id: denso_base

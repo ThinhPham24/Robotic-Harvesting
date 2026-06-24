@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>harvest_digital_twin</name>
+  <version>0.1.0</version>
+  <description>Operational digital twin synchronization and residual monitoring.</description>
+  <maintainer email="maintainer@example.com">Harvesting Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>harvest_interfaces</depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

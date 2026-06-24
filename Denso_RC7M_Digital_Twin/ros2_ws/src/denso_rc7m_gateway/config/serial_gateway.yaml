@@ -1,0 +1,23 @@
+serial_gateway:
+  ros__parameters:
+    port: /dev/ttyUSB0
+    baud_rate: 19200
+    message_timeout_sec: 0.5
+    position_timeout_sec: 1500.0
+    poll_rate_hz: 5.0
+    joint_state_topic: /joint_states
+    action_name: /denso_joint_trajectory_controller/follow_joint_trajectory
+    joint_names:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
+    execution_enabled: false
+    execution_speed_percent: 5
+    maximum_trajectory_points: 25
+    maximum_joint_step_rad: 0.20
+    goal_tolerance_rad: 0.05
+    figure: 5
+    gripper_closed: false

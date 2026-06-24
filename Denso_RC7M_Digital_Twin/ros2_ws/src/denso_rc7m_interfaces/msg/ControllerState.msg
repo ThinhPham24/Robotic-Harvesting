@@ -1,0 +1,15 @@
+std_msgs/Header header
+string controller_model
+string robot_model
+uint64 sequence
+uint64 source_time_unix_ns
+string mode
+bool servo_on
+bool emergency_stop
+bool protective_stop
+int32 alarm_code
+string alarm_text
+string native_task
+uint64 cycle_count
+float64 packet_age_sec
+uint64 dropped_packets

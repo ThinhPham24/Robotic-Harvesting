@@ -1,0 +1,7 @@
+maintenance_predictor:
+  ros__parameters:
+    health_topic: /harvest/health/state
+    prediction_topic: /harvest/maintenance/prediction
+    minimum_samples: 1000
+    publish_every_samples: 20
+    model_version: transparent_trend_baseline_v1

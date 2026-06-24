@@ -1,0 +1,16 @@
+repositories:
+  # Candidate Unity ROS transport. Pin an approved commit/tag after validating
+  # ROS 2 Humble compatibility with the Unity project:
+  #
+  # ros_tcp_endpoint:
+  #   type: git
+  #   url: https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git
+  #   version: <reviewed-ros2-commit-or-tag>
+  #
+  # Add pinned, reviewed external repositories here after selecting:
+  # - the exact FANUC driver/interface
+  # - MoveIt 2 packages not installed from apt
+  # - camera drivers
+  # - end-effector drivers
+  #
+  # Do not track unpinned default branches for a hardware deployment.

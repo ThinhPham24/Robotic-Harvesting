@@ -1,0 +1,8 @@
+condition_monitor:
+  ros__parameters:
+    residual_topic: /harvest/twin/residual
+    health_topic: /harvest/health/state
+    ewma_alpha: 0.10
+    position_rmse_warning_rad: 0.02
+    position_rmse_critical_rad: 0.05
+    synchronization_warning_sec: 0.10

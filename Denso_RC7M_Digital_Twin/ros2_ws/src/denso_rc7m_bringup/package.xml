@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>denso_rc7m_bringup</name>
+  <version>0.1.0</version>
+  <description>Launch files for the telemetry-only RC7M gateway.</description>
+  <maintainer email="maintainer@example.com">Robotics Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>denso_rc7m_gateway</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

@@ -1,0 +1,9 @@
+std_msgs/Header header
+string id
+string class_name
+geometry_msgs/Pose pose
+geometry_msgs/Vector3 size
+float64 confidence
+float64 position_uncertainty_m
+bool dynamic
+bool collision_enabled

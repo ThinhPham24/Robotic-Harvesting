@@ -1,0 +1,10 @@
+std_msgs/Header header
+string asset_id
+string[] joint_names
+float64[] position_error
+float64[] velocity_error
+float64 position_rmse
+float64 velocity_rmse
+float64 maximum_absolute_position_error
+float64 synchronization_age_sec
+bool synchronized

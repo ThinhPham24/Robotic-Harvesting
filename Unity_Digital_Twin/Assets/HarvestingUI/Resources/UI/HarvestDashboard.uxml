@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="HarvestDashboard.uss" />
+    <ui:VisualElement class="app-shell">
+        <ui:VisualElement class="top-bar">
+            <ui:VisualElement class="brand-block">
+                <ui:Label text="ROBOTIC HARVESTING DIGITAL TWIN" class="brand-title" />
+                <ui:Label text="CUCUMBER HARVESTING CELL 01" class="brand-subtitle" />
+            </ui:VisualElement>
+            <ui:Label name="clock" text="--" class="top-value clock" />
+            <ui:Label name="ros-status" text="ROS OFFLINE" class="top-value" />
+            <ui:Label name="mode-status" text="AUTO SUPERVISED" class="mode-pill" />
+            <ui:Label name="safety-status" text="SAFETY BLOCKED" class="top-value" />
+            <ui:VisualElement class="operator-block">
+                <ui:Label text="OPERATOR" class="eyebrow" />
+                <ui:Label text="engineering_user" class="operator-name" />
+            </ui:VisualElement>
+            <ui:Label name="estop-status" text="E-STOP&#10;ACTIVE" class="estop-card" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="body-row">
+            <ui:VisualElement class="side-nav">
+                <ui:Button text="◉  OVERVIEW" class="nav-button" />
+                <ui:Button text="◇  DIGITAL TWIN" class="nav-button nav-button--active" />
+                <ui:Button text="◉  PERCEPTION" class="nav-button" />
+                <ui:Button text="⚑  MISSION" class="nav-button" />
+                <ui:Button text="⌁  MOTION &amp; MPC" class="nav-button" />
+                <ui:Button text="♥  HEALTH" class="nav-button" />
+                <ui:Button text="◆  MAINTENANCE" class="nav-button" />
+                <ui:Button text="▤  LOGS" class="nav-button" />
+                <ui:Button text="⚙  SETTINGS" class="nav-button" />
+                <ui:VisualElement class="nav-spacer" />
+                <ui:Label text="SYSTEM UPTIME&#10;5d 02h 14m" class="nav-footer" />
+                <ui:Label text="SOFTWARE&#10;v0.1.0-dev" class="nav-footer" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="workspace">
+                <ui:VisualElement class="viewport-card">
+                    <ui:VisualElement class="viewport-toolbar">
+                        <ui:Label text="DIGITAL TWIN / LIVE CELL" class="panel-title" />
+                        <ui:Label text="Perspective" class="toolbar-pill" />
+                        <ui:Label text="Twin_Cam_Main" class="toolbar-pill" />
+                        <ui:Label text="● LIVE   30 FPS" class="live-pill" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="viewport-content">
+                        <ui:Label text="UNITY 3D CELL VIEWPORT" class="viewport-placeholder-title" />
+                        <ui:Label text="Render the FANUC model, greenhouse, semantic entities, safety zones,&#10;target uncertainty and MPC trajectory behind this UI layer." class="viewport-placeholder-copy" />
+                        <ui:VisualElement class="target-reticle">
+                            <ui:Label text="C-042" class="reticle-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="trajectory-line" />
+                        <ui:Label text="MPC SHADOW" class="mpc-tag" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="telemetry-row">
+                    <ui:VisualElement class="chart-card">
+                        <ui:Label text="JOINT TRACKING ERROR" class="panel-title" />
+                        <ui:VisualElement name="tracking-chart" class="chart-host" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="chart-card">
+                        <ui:Label text="MOTOR LOAD" class="panel-title" />
+                        <ui:VisualElement name="load-chart" class="chart-host" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="chart-card">
+                        <ui:Label text="NETWORK LATENCY" class="panel-title" />
+                        <ui:Label name="latency-value" text="--" class="chart-value" />
+                        <ui:VisualElement name="latency-chart" class="chart-host" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="chart-card">
+                        <ui:Label text="MPC SOLVE TIME" class="panel-title" />
+                        <ui:Label name="mpc-value" text="--" class="large-metric" />
+                        <ui:Label text="SHADOW MODE / OUTPUT NOT AUTHORIZED" class="metric-caption" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="sensor-strip">
+                    <ui:Label text="CAMERA HEALTH" class="panel-title" />
+                    <ui:Label text="●  STEREO LEFT   30.1 FPS" class="sensor-ok" />
+                    <ui:Label text="●  STEREO RIGHT   30.0 FPS" class="sensor-ok" />
+                    <ui:Label text="●  WRIST CAMERA   30.2 FPS" class="sensor-ok" />
+                    <ui:Label text="●  ENV CAMERA 1   29.9 FPS" class="sensor-ok" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="inspector">
+                <ui:VisualElement class="panel-card">
+                    <ui:Label text="SELECTED TARGET" class="eyebrow" />
+                    <ui:Label name="target-title" text="TARGET CUCUMBER C-042" class="section-heading" />
+                    <ui:VisualElement class="metric-grid">
+                        <ui:Label text="CONFIDENCE" class="metric-label" />
+                        <ui:Label name="confidence-value" text="--" class="metric-value status--ok" />
+                        <ui:Label text="UNCERTAINTY (3D)" class="metric-label" />
+                        <ui:Label name="uncertainty-value" text="--" class="metric-value" />
+                        <ui:Label text="DISTANCE" class="metric-label" />
+                        <ui:Label name="distance-value" text="--" class="metric-value" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="panel-card">
+                    <ui:Label text="TASK STATE MACHINE" class="panel-title" />
+                    <ui:Label name="mission-state" text="IDLE" class="state-pill" />
+                    <ui:VisualElement class="state-track">
+                        <ui:Label text="IDLE" class="state-node" />
+                        <ui:Label text="APPROACH" class="state-node state-node--active" />
+                        <ui:Label text="ALIGN" class="state-node" />
+                        <ui:Label text="GRASP" class="state-node" />
+                        <ui:Label text="CUT" class="state-node" />
+                        <ui:Label text="RETRACT" class="state-node" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="panel-card">
+                    <ui:Label text="MISSION ACTIONS" class="panel-title" />
+                    <ui:VisualElement class="action-row">
+                        <ui:Button name="start-mission" text="▶  START MISSION" class="action-primary" />
+                        <ui:Button name="hold-mission" text="Ⅱ  HOLD" class="action-secondary" />
+                    </ui:VisualElement>
+                    <ui:Button name="estop-button" text="■  E-STOP REQUEST" class="action-danger" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="panel-card maintenance-card">
+                    <ui:Label text="PREDICTIVE MAINTENANCE" class="panel-title" />
+                    <ui:VisualElement class="health-row">
+                        <ui:VisualElement name="health-ring" class="health-ring">
+                            <ui:Label name="health-value" text="--" class="health-value" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="health-detail">
+                            <ui:Label text="ACTIVE INDICATOR" class="eyebrow" />
+                            <ui:Label text="J2 vibration trend" class="warning-text" />
+                            <ui:Label name="maintenance-text" text="--" class="maintenance-copy" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

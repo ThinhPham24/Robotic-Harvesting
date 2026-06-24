@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>denso_rc7m_gateway</name>
+  <version>0.1.0</version>
+  <description>Serial and telemetry gateways for a legacy DENSO RC7M adapter.</description>
+  <maintainer email="maintainer@example.com">Robotics Team</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>control_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>denso_rc7m_interfaces</depend>
+  <exec_depend>python3-serial</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

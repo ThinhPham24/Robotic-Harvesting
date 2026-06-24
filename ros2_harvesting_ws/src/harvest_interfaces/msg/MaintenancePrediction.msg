@@ -1,0 +1,8 @@
+std_msgs/Header header
+string asset_id
+float64 failure_risk
+float64 estimated_rul_hours
+float64 confidence
+bool sufficient_history
+string model_version
+string recommended_action

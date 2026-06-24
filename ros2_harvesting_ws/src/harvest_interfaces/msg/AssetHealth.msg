@@ -1,0 +1,11 @@
+std_msgs/Header header
+string asset_id
+uint8 UNKNOWN=0
+uint8 HEALTHY=1
+uint8 WARNING=2
+uint8 CRITICAL=3
+uint8 state
+float64 health_score
+float64 anomaly_score
+string[] active_indicators
+string recommendation

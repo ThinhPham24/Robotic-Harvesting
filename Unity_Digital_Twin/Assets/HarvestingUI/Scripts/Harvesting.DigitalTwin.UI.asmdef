@@ -1,0 +1,14 @@
+{
+    "name": "Harvesting.DigitalTwin.UI",
+    "rootNamespace": "Harvesting.DigitalTwin.UI",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

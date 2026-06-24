@@ -1,0 +1,11 @@
+unity_bridge:
+  ros__parameters:
+    world_frame: world
+    scene_topic: /harvest/perception/scene_entities
+    point_cloud_topic: /harvest/perception/scene_cloud
+    twin_namespace: /harvest/twin
+    stale_entity_timeout_sec: 1.0
+    maximum_robot_state_age_sec: 0.10
+    maximum_scene_age_sec: 0.25
+    allow_unity_motion_commands: false
+    allow_unity_tool_commands: false
